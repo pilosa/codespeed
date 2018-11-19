@@ -17,9 +17,25 @@ ADMINS = (
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASEDIR, 'data.db'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'codespeed',
+        'USER': 'ubuntu',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASEDIR, 'data.db'),
+    #}
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.oracle',
+    #     'NAME': 'xe',  # SID
+    #     'USER': 'a_user',
+    #     'PASSWORD': 'a_password',
+    #     'HOST': 'dbprod01ned.mycompany.com',
+    #     'PORT': '1540',
+    # }
 }
 
 TIME_ZONE = 'America/Chicago'
