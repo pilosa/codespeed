@@ -54,6 +54,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 SECRET_KEY = 'as%n_m#)^vee2pe91^^@c))sl7^c6t-9r8n)_69%)2yt+(la2&'
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'codespeed.pilosa.com']
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',

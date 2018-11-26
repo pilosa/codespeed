@@ -1,4 +1,5 @@
 Django>=1.7,<2.0
 isodate>=0.4.7,<0.6
+gunicorn
 matplotlib>=1.4.3,<2.0
 psycopg2
