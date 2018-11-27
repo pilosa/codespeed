@@ -19,7 +19,8 @@ sys.path.append(codespeed_dir)
 # os.environ['DJANGO_SETTINGS_MODULE'] = codespeed_dir.split(os.path.sep)[-1] + '.settings'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'sample_project.settings'
 
-print(os.environ['DJANGO_SETTINGS_MODULE'])
+import django
+django.setup()
 
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
