@@ -26,7 +26,14 @@ data = {
 }
 ```
 
-`project` must be `pilosa`, `branch` must be `master` (for now), `executable` and `environment` should be one of the values present in the database (visit /admin to see). `result_value` is in seconds by default; keeping units consistent is simplest. `benchmark` is a name that should clearly identify a benchmark program. `commitid` should enable codespeed to pull the corresponding `revision_date`, but that requires some setup/research, and is not currently working. `revision_date` should be supplied when posting data, for now.
+- `project` must be `pilosa`
+- `branch` must be `master` (for now)
+- `executable` and `environment` should be one of the values present in the database (visit /admin to see)
+- `result_value` is in seconds by default; keeping units consistent is simplest
+- `benchmark` is a name that should clearly identify a benchmark program
+- `commitid`, if provided, should enable codespeed to pull the corresponding `revision_date`, but that requires some setup/research, and is not currently working
+- `revision_date` should be supplied when posting data, for now
+- `result_date` is the timestamp of the benchmark run
 
 The sample scripts provided in this repo `POST` this data to `CODESPEED_URL + "result/add/"` after urlencoding. 
 
