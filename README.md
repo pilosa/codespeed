@@ -8,6 +8,26 @@ Known to be used by [CPython](https://speed.python.org), [PyPy](http://speed.pyp
 
 For an overview of some application concepts see the [wiki page](https://github.com/tobami/codespeed/wiki/Overview)
 
+# Usage
+
+Example payload:
+
+```json
+data = {
+    'commitid': '0ed5b863',
+    'project': 'pilosa',
+    'branch': 'master',
+    'executable': 'pilosa-amd64',
+    'benchmark': 'some-benchmark-name',
+    'environment': 'OCI-VM.DenseIO2.8x3',
+    'result_value': 0.00345,
+    'result_date': 2018-12-06 00:10:00,
+    'revision_date': 2018-11-16 00:00:00,
+}
+```
+
+Project must be `pilosa`, branch must be `master` (for now), executable and environment should be one of the values present in the database (visit /admin to see). Result value is in seconds by default.
+
 # Installation
 
 You will need Python 2.7 or 3.4+.
