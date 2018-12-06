@@ -14,19 +14,25 @@ Example payload:
 
 ```json
 data = {
-    'commitid': '0ed5b863',
-    'project': 'pilosa',
-    'branch': 'master',
-    'executable': 'pilosa-amd64',
-    'benchmark': 'some-benchmark-name',
-    'environment': 'OCI-VM.DenseIO2.8x3',
-    'result_value': 0.00345,
-    'result_date': 2018-12-06 00:10:00,
-    'revision_date': 2018-11-16 00:00:00,
+    "commitid": "0ed5b863",
+    "project": "pilosa",
+    "branch": "master",
+    "executable": "pilosa-amd64",
+    "benchmark": "some-benchmark-name",
+    "environment": "OCI-VM.DenseIO2.8x3",
+    "result_value": 0.00345,
+    "result_date": "2018-12-06 00:10:00",
+    "revision_date": "2018-11-16 00:00:00"
 }
 ```
 
-Project must be `pilosa`, branch must be `master` (for now), executable and environment should be one of the values present in the database (visit /admin to see). Result value is in seconds by default.
+`project` must be `pilosa`, `branch` must be `master` (for now), `executable` and `environment` should be one of the values present in the database (visit /admin to see). `result_value` is in seconds by default; keeping units consistent is simplest. `benchmark` is a name that should clearly identify a benchmark program. `commitid` should enable codespeed to pull the corresponding `revision_date`, but that requires some setup/research, and is not currently working. `revision_date` should be supplied when posting data, for now.
+
+The sample scripts provided in this repo `POST` this data to `CODESPEED_URL + "result/add/"` after urlencoding. 
+
+`curl` example:
+
+`curl $CODESPEED_URL/result/add/ -XPOST -d "commitid=0ed5b863&project=pilosa&executable=pilosa-amd64&revision_date=2018-11-16+00%3A00%3A00&result_value=0.00345&branch=master&environment=OCI-VM.DenseIO2.8x3&result_date=2018-12-06+00%3A10%3A00&benchmark=some-benchmark-name"`
 
 # Installation
 
