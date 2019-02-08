@@ -41,6 +41,8 @@ The sample scripts provided in this repo `POST` this data to `CODESPEED_URL + "r
 
 `curl $CODESPEED_URL/result/add/ -XPOST -d "commitid=0ed5b863&project=pilosa&executable=pilosa-amd64&revision_date=2018-11-16+00%3A00%3A00&result_value=0.00345&branch=master&environment=OCI-VM.DenseIO2.8x3&result_date=2018-12-06+00%3A10%3A00&benchmark=some-benchmark-name"`
 
+Note that the `environment value` must already exist in the codespeed database. If it does not, the app will respond with `400 BAD REQUEST`
+
 # Installation
 
 You will need Python 2.7 or 3.4+.
