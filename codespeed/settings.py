@@ -51,7 +51,7 @@ NORMALIZATION = False # True will enable normalization as the default selection
                       # in the Comparison view. The default normalization can be
                       # chosen in the defaultbaseline setting
 
-CHART_ORIENTATION = 'vertical' # 'vertical' or 'horizontal can be chosen as
+CHART_ORIENTATION = 'horizontal' # 'vertical' or 'horizontal can be chosen as
                               # default chart orientation
 
 COMP_EXECUTABLES = None  # Which executable + revision should be checked as default

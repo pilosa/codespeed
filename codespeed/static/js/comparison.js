@@ -222,7 +222,7 @@ function renderComparisonPlot(plotid, benchmarks, exes, enviros, baseline, chart
     // - Screen width and number of bars being displayed
     var plotwidth = $("#plotwrapper").width();
     var plotheight = $("#" + plotid).height();
-    var barWidth = 20;
+    var barWidth = 40;
     var w = 0;
     var h = 0;
     var plotoptions = [];
